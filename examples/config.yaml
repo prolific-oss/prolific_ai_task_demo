@@ -1,0 +1,45 @@
+# Model configuration
+model: "meta-llama/Llama-3.2-3B" # "Qwen/Qwen2.5-3B-Instruct" 
+num_completions_per_prompt: 2
+temperatures: [0.7, 1.0]
+max_new_tokens: 512
+top_p: 0.9
+
+# Prolific study configuration
+prolific:
+  batch_name: "HH-RLHF Pairwise Comparison Batch"
+
+  task_schema:
+    # human-facing fields
+    task_name: "Compare two AI-generated responses"
+  
+    task_introduction: |
+      <p>You will see a short prompt (a user question) and two possible AI assistant responses (“Response A” and “Response B”).</p>
+      <p>Your job is to choose which response you would prefer to receive from an assistant.</p>
+
+    task_steps: |
+      <p>Please consider:</p>
+      <ul>
+      <li>Accuracy and correctness</li>
+      <li>Helpfulness and completeness</li>
+      <li>Clarity and organization</li>
+      <li>Safety and appropriateness</li>
+      </ul>
+      <p>Pick the response that feels overall better, even if both are imperfect.</p>
+
+    task_question: "Pick the response that feels overall better, even if both are imperfect."
+
+    tasks_per_group: 10 # how many comparisons each participant will do per assignment
+
+  study_setup:
+    internal_name: "HH-RLHF Pairwise Comparison"
+
+    data_collection_method: "DC_TOOL" # AI Task Builder 
+
+    # Study settings
+    estimated_completion_time: 5 # minutes per participant
+    max_time: 15 # minutes per participant
+    reward: 75 # payout per participant (in cents in the currency of your account)
+    device_compatibility:
+      - "desktop"
+    participants_per_task: 5

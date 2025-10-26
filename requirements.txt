@@ -1,0 +1,27 @@
+# Core dependencies
+requests>=2.31.0
+pyyaml>=6.0.1
+python-dotenv>=1.0.0
+
+# Data processing
+numpy>=1.24.0
+pandas>=2.0.0
+
+# ML/DL frameworks
+torch>=2.0.0
+transformers>=4.35.0
+datasets>=2.14.0
+
+# Monitoring and logging
+tqdm>=4.65.0
+wandb>=0.16.0
+
+# Notebook support (optional)
+jupyter>=1.0.0
+ipywidgets>=8.0.0
+
+# Development dependencies
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.5.0

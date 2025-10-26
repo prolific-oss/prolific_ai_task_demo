@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# Environment variables
+.env
+
+# Python
+__pycache__/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data files (except examples)
+*.jsonl
+!examples/*.jsonl
+*.json
+!examples/*.json
+*.csv
+*.pkl
+*.pt
+*.pth
