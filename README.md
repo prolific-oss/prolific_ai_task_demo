@@ -1,4 +1,4 @@
-# Prolific AI Taskers: RLHF Data Collection Pipeline
+# Prolific AI Task Builder: RLHF Data Collection Pipeline
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![Status: Beta](https://img.shields.io/badge/Status-Beta-orange.svg)]()
